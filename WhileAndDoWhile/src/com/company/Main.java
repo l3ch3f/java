@@ -66,7 +66,7 @@ public class Main {
                 continue;
             }
             System.out.println("Even number " + number);
-            
+
             evenNumbersFound++;
             if (evenNumbersFound >= 5) {
                 break;
