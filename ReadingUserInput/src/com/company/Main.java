@@ -11,20 +11,28 @@ public class Main {
         // scanner works also with integers you need to set the datatype.
         // the reason why its above the String: it is recommende to call nextline or else it is gonna skip the next call.
         System.out.println("Enter your year of birth:");
-        int yearOfBirth = scanner.nextInt();
-        scanner.nextLine(); // handle next line character (enter key)
 
-        // retrieve input from user and store it in a String.
-        System.out.println("Enter your name: ");
-        String name = scanner.nextLine();
+        boolean hasNextInt = scanner.hasNextInt();
+        if (hasNextInt) {
+            int yearOfBirth = scanner.nextInt();
+            scanner.nextLine(); // handle next line character (enter key)
 
-        // calculate for how old a person is.
-        int age = 2020 - yearOfBirth;
+            // retrieve input from user and store it in a String.
+            System.out.println("Enter your name: ");
+            String name = scanner.nextLine();
 
-        // print outs to user.
-        System.out.println("Your name is " + name + ", and you are " + age + " years old.");
+            // calculate for how old a person is.
+            int age = 2020 - yearOfBirth;
 
-
+            if (age >= 0 && age <= 100) {
+                // print outs to user.
+                System.out.println("Your name is " + name + ", and you are " + age + " years old.");
+            } else {
+                System.out.println("Invalid year of birth");
+            }
+        } else {
+            System.out.println("Unable to parse year of birth");
+        }
         // it needs to be closed.
         scanner.close();
     }
