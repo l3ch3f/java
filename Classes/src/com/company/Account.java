@@ -14,6 +14,14 @@ public class Account {
         System.out.println("Empty constructor called");
     }
 
+    // made with code=>generate=>constructor
+    public Account(String customerName, String customerEmailAddress, String customerPhoneNumber) {
+        this("99999",100.55,customerName,customerEmailAddress,customerPhoneNumber);
+        this.customerName = customerName;
+        this.customerEmailAddress = customerEmailAddress;
+        this.customerPhoneNumber = customerPhoneNumber;
+    }
+
     public Account(String number, double balance, String customerName, String customerEmailAddress, String customerPhoneNumber) {
         System.out.println("constructor with parameters calld.");
         this.number = number;
