@@ -20,5 +20,17 @@ public class Main {
         bobsAccount.withdrawal(150.0);
         bobsAccount.deposit(51.0);
         bobsAccount.withdrawal(150.0);
+
+        Account timsAccount = new Account("Tim", "tim@email.com", "12345");
+        System.out.println(timsAccount.getNumber() + " name " + timsAccount.getCustomerName());
+
+        // Create a new class VipCustomer
+        // it should have 3 fields name, credit limit, and email address.
+        // create 3 constructors
+        // 1st constructor empty should call the constructor with 3 parameters with default values
+        // 2nd constructor should pass on the 2 values it receives and add a default value fpr the 3rd
+        // 3rd constructor should save all fields.
+        // create getters only for this using code generation of intellij as setters wont ve needed
+        // test and comfirm it works.
     }
 }
