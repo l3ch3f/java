@@ -32,5 +32,14 @@ public class Main {
         // 3rd constructor should save all fields.
         // create getters only for this using code generation of intellij as setters wont ve needed
         // test and comfirm it works.
+
+        VipPerson person1 = new VipPerson();
+        System.out.println(person1.getName());
+
+        VipPerson person2 = new VipPerson("Bob", 25000.00);
+        System.out.println(person2.getName());
+
+        VipPerson person3 = new VipPerson("Tim", 10000.00, "myemail@email.com");
+        System.out.println(person3.getName());
     }
 }
