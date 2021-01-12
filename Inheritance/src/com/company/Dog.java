@@ -27,4 +27,13 @@ public class Dog extends Animal {
         chew();
         super.eat();
     }
+
+    public void walk() {
+        System.out.println("Dog.walk() called");
+        move(5);
+    }
+
+    public void run() {
+        move(10);
+    }
 }
