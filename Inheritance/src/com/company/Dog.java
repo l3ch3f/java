@@ -30,7 +30,7 @@ public class Dog extends Animal {
 
     public void walk() {
         System.out.println("Dog.walk() called");
-        move(5);
+        super.move(5);
     }
 
     public void run() {
