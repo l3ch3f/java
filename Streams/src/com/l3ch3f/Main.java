@@ -8,18 +8,19 @@ public class Main {
         String yourString = string.replaceAll("I", "You");
         System.out.println(yourString);
 
-        String aplhanumeric = "abcDeeeF123Ghhiiijkl99z";
-        System.out.println(aplhanumeric.replaceAll(".", "Y"));
+        String alphanumeric = "abcDeeeF123Ghhiiijkl99z";
+        System.out.println(alphanumeric.replaceAll(".", "Y"));
 
-        System.out.println(aplhanumeric.replaceAll("^abcDeee","YYY"));
+        System.out.println(alphanumeric.replaceAll("^abcDeee","YYY"));
 
         String secondString = "abcDeeeF123Ghhiiijkl99z";
         System.out.println(secondString.replaceAll("^abcDeee","YYY"));
 
-        System.out.println(aplhanumeric.matches("^hello"));
-        System.out.println(aplhanumeric.matches("^abcDeee"));
-        System.out.println(aplhanumeric.matches("abcDeeeF123Ghhiiijkl99z"));
+        System.out.println(alphanumeric.matches("^hello"));
+        System.out.println(alphanumeric.matches("^abcDeee"));
+        System.out.println(alphanumeric.matches("abcDeeeF123Ghhiiijkl99z"));
 
-        System.out.println(aplhanumeric.replaceAll("ijkl99z","THE END"));
+        System.out.println(alphanumeric.replaceAll("ijkl99z","THE END"));
+        System.out.println(alphanumeric.replaceAll("a", "hello"));
     }
 }
