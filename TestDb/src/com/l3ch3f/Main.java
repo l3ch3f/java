@@ -35,6 +35,7 @@ public class Main {
 
         } catch (SQLException e) {
             System.out.println("Something went wrong " + e.getMessage());
+            e.printStackTrace();
         }
     }
 }
