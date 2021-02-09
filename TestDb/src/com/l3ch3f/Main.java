@@ -5,8 +5,14 @@ import java.sql.*;
 public class Main {
 
     public static void main(String[] args) {
+
+        final String DB_NAME = "codejavadb";
+        final String DB_USER = "root";
+        final String DB_PASSWORD = "Welkom01!";
+        final String CONNECTION_STRING = "jdbc:mysql://localhost:3307/"+ DB_NAME + "? useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	    try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/codejavadb? useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","root","Welkom01!");
+//            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/codejavadb? useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","root","Welkom01!");
+            Connection conn = DriverManager.getConnection(CONNECTION_STRING, DB_USER, DB_PASSWORD);
             Statement statement = conn.createStatement();
             statement.execute("CREATE TABLE IF NOT EXISTS contacts (name TEXT, phone INTEGER, email TEXT)");
             /*
